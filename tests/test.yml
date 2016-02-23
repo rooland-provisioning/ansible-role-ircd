@@ -6,4 +6,4 @@
     ircd_port: 8001
 
   roles:
-    - ircd
+    - ansible-ircd
