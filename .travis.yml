@@ -19,16 +19,13 @@ install:
   - ansible --version
 
   # Create ansible.cfg with correct roles_path
-  - printf '[defaults]\n' >ansible.cfg
-  - printf 'roles_path=../\n' >>ansible.cfg
-  # Ignore SSH host keys during test
-  - printf 'host_key_checking=False\n' >>ansible.cfg
+  - printf '[defaults]\nroles_path=../' >ansible.cfg
 
 script:
   # Basic role syntax check
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
   # Role check
-  - ansible-playbook tests/test.yml -i tests/inventory
+  - ansible-playbook tests/test.yml -i tests/inventory --ssh-common-args='-o StrictHostKeyChecking=no'
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
