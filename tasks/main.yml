@@ -1,0 +1,17 @@
+---
+- name: install ircd-irc2
+  apt: name=ircd-irc2 state=present
+
+- name: Copy across IRCD configuration
+  template: 
+    src=ircd.conf.j2 
+    dest=/etc/ircd/ircd.conf
+  notify:
+  - restart ircd
+
+- name: Copy across IRCD MOTD
+  template: 
+    src=ircd.motd.j2 
+    dest=/etc/ircd/ircd.motd
+  notify:
+  - restart ircd
