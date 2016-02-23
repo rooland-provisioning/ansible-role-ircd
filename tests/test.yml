@@ -1,5 +1,9 @@
 ---
-- hosts: localhost
+- hosts: all
   remote_user: root
+
+  vars:
+    ircd_port: 8001
+
   roles:
-    - { role: ircd, ircd_port: 8001 }
+    - ircd
