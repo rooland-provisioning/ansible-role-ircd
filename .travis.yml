@@ -20,6 +20,8 @@ install:
 
   # Create ansible.cfg with correct roles_path
   - printf '[defaults]\nroles_path=../' >ansible.cfg
+  # Ignore SSH host keys during test
+  - printf 'host_key_checking=False' >> ansible.cfg
 
 script:
   # Basic role syntax check
