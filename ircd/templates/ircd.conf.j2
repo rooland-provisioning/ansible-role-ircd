@@ -5,11 +5,11 @@
 
 # M-Line
 # M:irc.localhost::Debian ircd default configuration::000A
-M:{{ ansible_fqdn }}::{{ irc_geo_location }}:{{ irc_port }}:000A
+M:{{ ansible_fqdn }}::{{ ircd_geo_location }}:{{ ircd_port }}:000A
 
 # A-Line
 # A:This is Debian's default ircd configurations:Please edit your /etc/ircd/ircd.conf file:Contact <root@localhost> for questions::ExampleNet
-A:{{ irc_admin_name }}:{{ irc_admin_email }}:::{{ irc_network_name }}
+A:{{ ircd_admin_name }}:{{ ircd_admin_email }}:::{{ ircd_network_name }}
 
 # Y-Lines
 Y:1:90::100:512000:5.5:100.100
@@ -20,4 +20,4 @@ I:*:::0:1
 I:127.0.0.1/32:::0:1
 
 # P-Line
-P::::{{ irc_port }}:
+P::::{{ ircd_port }}:
