@@ -1,0 +1,4 @@
+---
+# handlers file for ircd
+- name: reload ircd
+  service: name=ircd-irc2 state=reloaded
