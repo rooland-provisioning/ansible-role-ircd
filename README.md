@@ -76,4 +76,4 @@ MIT
 Author Information
 ------------------
 
-jpbarto <jason.p.barto@gmail.com>
+Jason Barto <jason.p.barto@gmail.com>
