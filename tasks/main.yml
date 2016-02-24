@@ -1,6 +1,6 @@
 ---
 - name: install ircd-irc2
-  apt: pkg=ircd-irc2 state=installed
+  apt: pkg=ircd-irc2 state=installed update-cache=yes
 
 - name: Copy across IRCD configuration
   template: 
