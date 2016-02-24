@@ -5,13 +5,15 @@ python: "2.7"
 # Use the new container infrastructure
 sudo: required
 
-before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq python-apt python-pycurl
+# Install ansible
+addons:
+  apt:
+    packages:
+    - python-pip
 
 install:
   # Install ansible
-  - sudo pip install ansible
+  - pip install ansible
 
   # Check ansible version
   - ansible --version
