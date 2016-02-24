@@ -14,30 +14,25 @@ No requirements.
 Role Variables
 --------------
 
-ircd_motd
-A string of text to be embedded into the servers message of the day (motd) file.
-Default value: 'How now brown cow?'
+```yaml
+# text to be embedded into the servers message of the day (motd) file
+ircd_motd: how now brown cow
 
-ircd_admin_name
-A string containing the name of the administrator, eg 'John Smith'
-Default value: 'Admin Smith'
+# A string containing the name of the administrator, eg 'John Smith'
+ircd_admin_name: Admin Smith
 
-ircd_admin_email
-A string containing the email address of the administrator
-Default value: 'admin.smith@local.host'
+# A string containing the email address of the administrator
+ircd_admin_email: admin.smith@local.host
 
-ircd_port
-Which port number the server should listen on
-Default value: 6667
+# Which port number the server should listen on
+ircd_port: 6667
 
-ircd_network_name
-A string containing the IRC network name to which the server belongs, eg 'Interlinks IRC'
-Default value: 'local network'
+# A string containing the IRC network name to which the server belongs, eg 'Interlinks IRC'
+ircd_network_name: local network
 
-ircd_geo_location
-A string containing a description of, geographically, where the server resides, eg 'San Francisco, California, USA'
-Default value: 'Earth'
-
+# A string containing a description of, geographically, where the server resides, eg 'San Francisco, California, USA'
+ircd_geo_location: 'Earth'
+```
 
 Dependencies
 ------------
@@ -47,6 +42,7 @@ No dependendencies
 Example Playbook
 ----------------
 
+```yaml
     - hosts: ircd_servers
 
       become: true
@@ -67,13 +63,14 @@ Example Playbook
 
       roles:
          - { role: jpbarto.ircd }
+```
 
 License
 -------
 
-MIT
+[MIT](LICENSE)
 
 Author Information
 ------------------
 
-Jason Barto <jason.p.barto@gmail.com>
+Jason Barto - jason.p.barto@gmail.com
