@@ -1,6 +1,6 @@
 ---
 # defaults file for ircd
-ircd_version: "0.0.1"
+ircd_version: "0.9.0"
 ircd_motd: Confucious say, if you think you will sum up your whole life on this little bit of paper, you are crazy
 ircd_network_name: Local Network
 ircd_port: 6667
