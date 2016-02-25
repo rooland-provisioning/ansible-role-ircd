@@ -3,8 +3,8 @@ IRCD
 
 [![Build Status](https://travis-ci.org/jpbarto/ansible-ircd.svg?branch=master)](https://travis-ci.org/jpbarto/ansible-ircd)
 
-The IRCD role deploys the IRCD IRC2 server, its documentation can be found here: https://launchpad.net/ubuntu/+source/ircd-irc2
-Currently it supports deployment on Debian-based distributions only. Tested on Ubuntu 14.04.
+The IRCD role deploys the IRCD Hybrid server, its documentation can be found here: http://www.ircd-hybrid.org/
+Currently the role supports deployment on Debian-based distributions only. Tested on Ubuntu Trusty and Precise.
 
 Install
 -------
