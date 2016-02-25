@@ -1,5 +1,4 @@
 ---
 # handlers file for ircd
 - name: restart ircd
-  service: name=ircd-hybrid state=restarted
-#  command: service ircd-hybrid restart # need to use command as service currently hangs when restarting ircd
+  command: service ircd-hybrid restart # need to use command as service module cannot find ircd-hybrid service
