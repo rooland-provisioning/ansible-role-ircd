@@ -1,4 +1,4 @@
 ---
 # handlers file for ircd
 - name: restart ircd
-  command: service ircd-irc2 restart # need to use command as service currently hangs when restarting ircd
+  command: service ircd-hybrid restart # need to use command as service currently hangs when restarting ircd

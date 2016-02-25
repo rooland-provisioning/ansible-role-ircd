@@ -38,8 +38,8 @@ script:
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
 
-  - stat /etc/ircd/ircd.conf
-  - stat /etc/ircd/ircd.motd
+  - stat /etc/ircd-hybrid/ircd.conf
+  - stat /etc/ircd-hybrid/ircd.motd
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
