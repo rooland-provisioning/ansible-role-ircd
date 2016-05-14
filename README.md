@@ -22,25 +22,13 @@ No requirements.
 Role Variables and Defaults
 ---------------------------
 
-```yaml
-# text to be embedded into the servers message of the day (motd) file
-ircd_motd: Confucious say, if you think you will sum up your whole life on this little bit of paper, you are crazy
+- **ircd.motd**         (_required_): Text to be embedded into the servers message of the day (motd) file
+- **ircd.admin_name**   (_required_): A string containing the name of the administrator, eg 'John Smith'
+- **ircd.admin_email**  (_required_): A string containing the email address of the administrator
+- **ircd.port**         (_required_): Which port number the server should listen on
+- **ircd.network_name** (_required_): A string containing the IRC network name to which the server belongs, eg 'Interlinks IRC'
+- **ircd.geo_location** (_required_): A string containing a description of, geographically, where the server resides, eg 'San Francisco, California, USA'
 
-# A string containing the name of the administrator, eg 'John Smith'
-ircd_admin_name: Admin Smith
-
-# A string containing the email address of the administrator
-ircd_admin_email: admin@local.host
-
-# Which port number the server should listen on
-ircd_port: 6667
-
-# A string containing the IRC network name to which the server belongs, eg 'Interlinks IRC'
-ircd_network_name: Local Network
-
-# A string containing a description of, geographically, where the server resides, eg 'San Francisco, California, USA'
-ircd_geo_location: Earth
-```
 
 Dependencies
 ------------
@@ -58,19 +46,13 @@ Example Playbook
       become_method: sudo
 
       vars:
-        ircd_motd: Confucius say, if you think you will sum up your whole life on this little bit of paper, you are crazy.
-        ircd_network_name: Local Network
-        ircd_port: 6667
-        ircd_admin_name: Admin Smith
-        ircd_admin_email: admin@local.host
-        ircd_geo_location: Earth
-
-      pre_tasks:
-        - name: update apt cache
-          apt: update_cache=yes
-
-      roles:
-         - { role: jpbarto.ircd }
+        ircd:
+          motd: Confucius say, if you think you will sum up your whole life on this little bit of paper, you are crazy.
+          port: 6667
+          network_name: Local Network
+          admin_name:   Admin Smith
+          admin_email:  admin@local.host
+          geo_location: Earth
 ```
 
 License

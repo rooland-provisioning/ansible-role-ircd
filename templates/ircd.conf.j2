@@ -1,19 +1,19 @@
 serverinfo {
 	name = "{{ ansible_fqdn }}";
 	description = "ircd-hybrid 7.2-debian";
-	network_name = "{{ ircd_network_name }}";
+	network_name = "{{ ircd.network_name }}";
 	network_desc = "i am a network short and stout";
 	sid = "00A";
 };
 
 admin {
-	name = "{{ ircd_admin_name }}";
+	name = "{{ ircd.admin_name }}";
 	description = "Main Server Administrator";
-	email = "{{ ircd_admin_email }}";
+	email = "{{ ircd.admin_email }}";
 };
 
 listen {
-	port = {{ ircd_port }};
+	port = {{ ircd.port }};
 };
 
 /* auth {}: allow users to connect to the ircd (OLD I:) */
