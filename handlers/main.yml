@@ -3,3 +3,4 @@
   service:
     name:   ircd-hybrid
     state:  restarted
+  become: yes

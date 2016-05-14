@@ -40,10 +40,8 @@ Example Playbook
 
 ```yaml
     - hosts: ircd_servers
-
-      become: true
-      become_user: root
-      become_method: sudo
+      roles:
+         - rooland-provisioning.ircd
 
       vars:
         ircd:
