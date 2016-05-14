@@ -18,13 +18,13 @@ No requirements.
 
 ## Role Variables and Defaults
 
-- **ircd.motd**         (_required_): Text to be embedded into the servers message of the day (motd) file
 - **ircd.admin_name**   (_required_): A string containing the name of the administrator, eg 'John Smith'
 - **ircd.admin_email**  (_required_): A string containing the email address of the administrator
-- **ircd.port**         (_required_): Which port number the server should listen on
-- **ircd.network_name** (_required_): A string containing the IRC network name to which the server belongs, eg 'Interlinks IRC'
-- **ircd.geo_location** (_required_): A string containing a description of, geographically, where the server resides, eg 'San Francisco, California, USA'
 - **ircd.fqdn**         (_required_): Domain name on which IRC server will be reachable
+- **ircd.geo_location** (_required_): A string containing a description of, geographically, where the server resides, eg 'San Francisco, California, USA'
+- **ircd.motd**         (_required_): Text to be embedded into the servers message of the day (motd) file
+- **ircd.network_name** (_required_): A string containing the IRC network name to which the server belongs, eg 'Interlinks IRC'
+- **ircd.port**         (_required_): Which port number the server should listen on
 
 ## Dependencies
 
@@ -39,12 +39,12 @@ No dependendencies
 
       vars:
         ircd:
-          motd: Confucius say, if you think you will sum up your whole life on this little bit of paper, you are crazy.
-          port: 6667
-          network_name: Local Network
           admin_name:   Admin Smith
           admin_email:  admin@local.host
           geo_location: Earth
+          motd: Confucius say, if you think you will sum up your whole life on this little bit of paper, you are crazy.
+          network_name: Local Network
+          port:         6667
 ```
 
 ## License
