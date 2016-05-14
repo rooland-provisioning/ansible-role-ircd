@@ -3,17 +3,21 @@
   apt:
     name:   ircd-hybrid
     state:  present
+    update_cache: yes
+  become: yes
 
 - name: Copy across IRCD configuration
   template:
     src:  ircd.conf.j2
     dest: /etc/ircd-hybrid/ircd.conf
+  become: yes
   notify:
-  - restart ircd
+    - Restart ircd
 
 - name: Copy across IRCD MOTD
   template:
     src:  ircd.motd.j2
     dest: /etc/ircd-hybrid/ircd.motd
+  become: yes
   notify:
-  - restart ircd
+    - Restart ircd
