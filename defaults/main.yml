@@ -1,11 +1,11 @@
 ---
 # defaults file for ircd
 ircd:
-  version:  "0.9.0"
-  motd:     Confucious say, if you think you will sum up your whole life on this little bit of paper, you are crazy
-  network_name: Local Network
-  port:     6667
-  admin_name:   Admin Smith
   admin_email:  admin@local.host
+  admin_name:   Admin Smith
+  fqdn:         "{{ ansible_fqdn }}"
   geo_location: Earth
-  fqdn:     "{{ ansible_fqdn }}"
+  motd:         Confucious say, if you think you will sum up your whole life on this little bit of paper, you are crazy
+  network_name: Local Network
+  port:         6667
+  version:      "0.9.0"
