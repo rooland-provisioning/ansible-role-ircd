@@ -8,3 +8,4 @@ ircd:
   admin_name:   Admin Smith
   admin_email:  admin@local.host
   geo_location: Earth
+  fqdn:     "{{ ansible_fqdn }}"

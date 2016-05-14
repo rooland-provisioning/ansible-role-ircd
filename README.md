@@ -24,6 +24,7 @@ No requirements.
 - **ircd.port**         (_required_): Which port number the server should listen on
 - **ircd.network_name** (_required_): A string containing the IRC network name to which the server belongs, eg 'Interlinks IRC'
 - **ircd.geo_location** (_required_): A string containing a description of, geographically, where the server resides, eg 'San Francisco, California, USA'
+- **ircd.fqdn**         (_required_): Domain name on which IRC server will be reachable
 
 ## Dependencies
 

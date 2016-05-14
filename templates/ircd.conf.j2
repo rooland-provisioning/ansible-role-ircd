@@ -1,5 +1,5 @@
 serverinfo {
-	name = "{{ ansible_fqdn }}";
+	name = "{{ ircd.fqdn }}";
 	description = "ircd-hybrid 7.2-debian";
 	network_name = "{{ ircd.network_name }}";
 	network_desc = "i am a network short and stout";
@@ -72,7 +72,7 @@ general {
 	no_oper_flood = yes;
 	true_no_oper_flood = yes;
 	max_targets = 4;
-	oper_only_umodes = bots, cconn, debug, full, skill, nchange, 
+	oper_only_umodes = bots, cconn, debug, full, skill, nchange,
                      rej, spy, external, operwall, locops, unauth;
 
 	oper_umodes = locops, servnotice, operwall, wallop;
@@ -80,7 +80,7 @@ general {
 };
 
 modules {
-	/* module path: paths to search for modules specified below and 
+	/* module path: paths to search for modules specified below and
 	 * in /modload.
 	 */
 	path = "/usr/lib/ircd-hybrid/modules";
