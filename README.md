@@ -1,26 +1,22 @@
-IRCD
-=========
+# ansible-role-ircd
 
-[![Build Status](https://travis-ci.org/jpbarto/ansible-ircd.svg?branch=master)](https://travis-ci.org/jpbarto/ansible-ircd)
+[![Build Status](https://travis-ci.org/rooland-provisioning/ansible-ircd.svg?branch=master)](https://travis-ci.org/rooland-provisioning/ansible-ircd)
 
 The IRCD role deploys the IRCD Hybrid server, its documentation can be found here: http://www.ircd-hybrid.org/
 
 Currently the role supports deployment on Debian-based distributions only. Tested on Ubuntu Trusty and Precise.
 
-Install
--------
+## Install
 
 ```sh
-ansible-galaxy install jpbarto.ircd
+ansible-galaxy install rooland-provisioning.ircd
 ```
 
-Requirements
-------------
+##Requirements
 
 No requirements.
 
-Role Variables and Defaults
----------------------------
+## Role Variables and Defaults
 
 - **ircd.motd**         (_required_): Text to be embedded into the servers message of the day (motd) file
 - **ircd.admin_name**   (_required_): A string containing the name of the administrator, eg 'John Smith'
@@ -29,14 +25,11 @@ Role Variables and Defaults
 - **ircd.network_name** (_required_): A string containing the IRC network name to which the server belongs, eg 'Interlinks IRC'
 - **ircd.geo_location** (_required_): A string containing a description of, geographically, where the server resides, eg 'San Francisco, California, USA'
 
-
-Dependencies
-------------
+## Dependencies
 
 No dependendencies
 
-Example Playbook
-----------------
+## Example Playbook
 
 ```yaml
     - hosts: ircd_servers
@@ -53,12 +46,15 @@ Example Playbook
           geo_location: Earth
 ```
 
-License
--------
+## License
 
 [MIT](LICENSE)
 
-Author Information
-------------------
+## Author Information
 
-Jason Barto - jason.p.barto@gmail.com
+Jason Barto - jason.p.barto@gmail.com (original author)
+
+### Mailo Svetel
+
+- Usually idling on Freenode as lipoqil
+- http://him.rlnd.cz
