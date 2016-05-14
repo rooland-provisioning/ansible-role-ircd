@@ -3,7 +3,9 @@
   remote_user: root
   
   vars:
-    ircd_port: 8001
+    ircd:
+      port: 8001
+      fqdn: irc.travis-ci.org
 
   roles:
     - ansible-ircd

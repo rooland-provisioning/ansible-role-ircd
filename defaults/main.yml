@@ -1,9 +1,10 @@
 ---
 # defaults file for ircd
-ircd_version: "0.9.0"
-ircd_motd: Confucious say, if you think you will sum up your whole life on this little bit of paper, you are crazy
-ircd_network_name: Local Network
-ircd_port: 6667
-ircd_admin_name: Admin Smith
-ircd_admin_email: admin@local.host
-ircd_geo_location: Earth
+ircd:
+  version:  "0.9.0"
+  motd:     Confucious say, if you think you will sum up your whole life on this little bit of paper, you are crazy
+  network_name: Local Network
+  port:     6667
+  admin_name:   Admin Smith
+  admin_email:  admin@local.host
+  geo_location: Earth
