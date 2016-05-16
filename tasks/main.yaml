@@ -5,6 +5,10 @@
     state:  present
     update_cache: yes
   become: yes
+  
+- name: Reload available services
+  command:  initctl reload-configuration
+  when: ansible_distribution == 'Ubuntu'
 
 - name: Copy across IRCD configuration
   template:
