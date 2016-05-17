@@ -9,6 +9,7 @@
 - name:   Reload available services
   shell:  initctl reload-configuration
   when:   ansible_distribution == 'Ubuntu'
+  always_run: yes
 
 - name: Copy across IRCD configuration
   template:
