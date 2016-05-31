@@ -7,7 +7,7 @@
   become: yes
   
 - name:   Reload available services
-  shell:  initctl reload-configuration
+  shell:  update-rc.d ircd-hybrid enable
   become: yes
   when:   ansible_distribution == 'Ubuntu'
   always_run: yes
